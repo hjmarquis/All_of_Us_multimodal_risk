@@ -13,7 +13,7 @@ This directory contains the main statistical analysis pipeline for:
 
 ## Core Analysis
 
-- [Source/Full R Example.R](Source/Full R Example.R)
+- [Source/Full R Example.R](Source/Full%20R%20Example.R)
 
   Minimal end-to-end workflow demonstrating:
   - all-population initial model
