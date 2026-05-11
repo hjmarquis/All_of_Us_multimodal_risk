@@ -15,34 +15,31 @@ This directory contains the main statistical analysis pipeline for:
 
 - [Source/Full R Example.R](Source/Full%20R%20Example.R)
 
-  Minimal end-to-end workflow demonstrating:
+  Minimal workflow demonstrating by using compact function:
   - all-population initial model
   - all-population SSL model
   - Black-adjusted initial model
   - Black-adjusted SSL model
   - AUC / concordance uncertainty evaluation
 
-- [project/Step1_Comorbidities_V2.R](project/Step1_Comorbidities_V2.R)
-
-  Cohort construction and preprocessing.
-
-- [project/Step2_V5Commor.R](project/Step2_V5Commor.R)
-
-  Main Black-adjusted SSL analysis pipeline.
+Note: If the compact parallel functions fail due to memory limits or cluster issues, use the corresponding block-code scripts in `Source/`. The block-code workflow is mainly organized into four steps, where Step 2 and Step 4 contain the main model-running procedures and are generally more stable for large-scale runs.
 
 ---
 
-# SNP Extraction / PCA
+## Versioned Analysis Scripts
 
-- [project/RA_SNP_Ancestry.ipynb](project/RA_SNP_Ancestry.ipynb)
+The repository also contains multiple historical and intermediate analysis versions used during development and experimentation.
 
-  Extract ancestry SNPs from All of Us WGS data using Hail.
+Examples include:
+- V6: all-population SSL / Black-adjusted experiments (Main analysis in main text)
+- Comorbidities V2: final comorbidity-inclusive workflow with 70/30% Training Testing (Supplemenmtary
+- PCA V6.5: Main analysis with PCA-adjusted covariates.
+  Ancestry SNP extraction workflow:
+  [extra/RA_SNP_Ancestry.ipynb](../extra/RA_SNP_Ancestry.ipynb)
+- PCA V1: Commorbidity Analysis with PCA adjusted covariates
+- V12 / V13: custom mapping workflow where the cohort is constructed and case/control status is defined using R. This version is optional and mainly preserved for comparison. 
 
-- [project/RA_control_genomics_extraction.ipynb](project/RA_control_genomics_extraction.ipynb)
-
-  Control cohort extraction workflow.
-
----
+These scripts are preserved for reproducibility and version tracking.
 
 # Shared Functions
 
@@ -53,7 +50,6 @@ The `shared/` directory contains all core functions used throughout the analysis
 - uncertainty quantification
 - evaluation metrics
 - parallel computation helpers
-- data loading and preprocessing
 
 Main entry point:
 
