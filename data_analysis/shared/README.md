@@ -33,7 +33,11 @@ For large-scale runs, the block-code workflow in `Source/` is organized into fou
 - Step 3: Race specific SNP selection.
 - Step 4: final Race-adjusted model fitting and evaluation.
 
-Uncertainty quantification is mainly implemented in the later model-running scripts, especially Step 4, where perturbation-based training uncertainty and test-set bootstrap AUC evaluation are combined. Concordance uncertainty is evaluated over the outer perturbation layer.
+After Step 4, run [Source/Uncertainty Quantification STM.R](Source/Uncertainty%20Quantification%20STM.R) for uncertainty quantification. This script combines perturbation-based training uncertainty with test-set bootstrap AUC evaluation, while concordance uncertainty is evaluated over the outer perturbation layer.
+
+### All saved intermediate and final objects are written to:
+
+`data_analysis/shared/project/`
 ---
 
 ## Versioned Analysis Scripts
