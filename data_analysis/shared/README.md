@@ -13,7 +13,7 @@ This directory contains the main statistical analysis pipeline for:
 
 ## Core Analysis
 
-- [project/run_black_ssl_adjusted_example.R](project/run_black_ssl_adjusted_example.R)
+- [Source/Full R Example.R](Source/Full R Example.R)
 
   Minimal end-to-end workflow demonstrating:
   - all-population initial model
