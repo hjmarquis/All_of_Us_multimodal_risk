@@ -28,16 +28,15 @@ Note: If the compact parallel functions fail due to memory limits or cluster iss
 
 For large-scale runs, the block-code workflow in `Source/` is organized into four main steps:
 
-- Step 1: model input construction and preprocessing.
+- Step 1: Model input construction and preprocessing.
 - Step 2: All Race model fitting.
 - Step 3: Race specific SNP selection.
-- Step 4: final Race-adjusted model fitting and evaluation.
+- Step 4: Final Race-adjusted model fitting and evaluation.
 
 After Step 4, run [Source/Uncertainty Quantification STM.R](Source/Uncertainty%20Quantification%20STM.R) for uncertainty quantification. This script combines perturbation-based training uncertainty with test-set bootstrap AUC evaluation, while concordance uncertainty is evaluated over the outer perturbation layer.
 
-### All saved intermediate and final objects are written to:
+All saved intermediate and final objects are written to: `data_analysis/shared/project/`
 
-`data_analysis/shared/project/`
 ---
 
 ## Versioned Analysis Scripts
@@ -46,7 +45,7 @@ The repository also contains multiple historical and intermediate analysis versi
 
 Examples include:
 - V6: all-population SSL / Black-adjusted experiments (Main analysis in main text)
-- Comorbidities V2: final comorbidity-inclusive workflow with 70/30% Training Testing (Supplementary)
+- Comorbidities V2: final comorbidity-inclusive workflow with 70/30% Training/Testing (Supplementary)
 - PCA V6.5: Main analysis with PCA-adjusted covariates.
   Ancestry SNP extraction workflow:
   [RA_SNP_Ancestry.ipynb](../../extra/RA_SNP_Ancestry.ipynb)
