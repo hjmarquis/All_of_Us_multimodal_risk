@@ -35,7 +35,7 @@ Examples include:
 - Comorbidities V2: final comorbidity-inclusive workflow with 70/30% Training Testing (Supplemenmtary
 - PCA V6.5: Main analysis with PCA-adjusted covariates.
   Ancestry SNP extraction workflow:
-  [extra/RA_SNP_Ancestry.ipynb](../../extra/RA_SNP_Ancestry.ipynb)
+  [extra/RA_SNP_Ancestry.ipynb](../extra/RA_SNP_Ancestry.ipynb)
 - PCA V1: Commorbidity Analysis with PCA adjusted covariates
 - V12 / V13: custom mapping workflow where the cohort is constructed and case/control status is defined using R. This version is optional and mainly preserved for comparison. 
 
