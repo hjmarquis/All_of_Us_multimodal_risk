@@ -24,6 +24,16 @@ This directory contains the main statistical analysis pipeline for:
 
 Note: If the compact parallel functions fail due to memory limits or cluster issues, use the corresponding block-code scripts in `Source/`. The block-code workflow is mainly organized into four steps, where Step 2 and Step 4 contain the main model-running procedures and are generally more stable for large-scale runs.
 
+## Block-Code Workflow
+
+For large-scale runs, the block-code workflow in `Source/` is organized into four main steps:
+
+- Step 1: model input construction and preprocessing.
+- Step 2: All Race model fitting.
+- Step 3: Race specific SNP selection.
+- Step 4: final Race-adjusted model fitting and evaluation.
+
+Uncertainty quantification is mainly implemented in the later model-running scripts, especially Step 4, where perturbation-based training uncertainty and test-set bootstrap AUC evaluation are combined. Concordance uncertainty is evaluated over the outer perturbation layer.
 ---
 
 ## Versioned Analysis Scripts
@@ -32,7 +42,7 @@ The repository also contains multiple historical and intermediate analysis versi
 
 Examples include:
 - V6: all-population SSL / Black-adjusted experiments (Main analysis in main text)
-- Comorbidities V2: final comorbidity-inclusive workflow with 70/30% Training Testing (Supplemenmtary
+- Comorbidities V2: final comorbidity-inclusive workflow with 70/30% Training Testing (Supplementary)
 - PCA V6.5: Main analysis with PCA-adjusted covariates.
   Ancestry SNP extraction workflow:
   [RA_SNP_Ancestry.ipynb](../../extra/RA_SNP_Ancestry.ipynb)
